@@ -11,12 +11,17 @@ https://api.sap.com/api/activity/overview
 ## sqlの設定ファイル
 sap-activity-sql には、sqlの設定ファイルとして以下のsqlファイルが含まれています。  
 
-* sap-appointment-collection-data.sql（SAP アクティビティ - アポイントメントデータ）  
-* sap-appointment-collection-sql-appointment-involved-parties-data.sql（SAP アクティビティ - アポイントメント関係者データ）  
-* sap-appointment-collection-sql-appointment-other-parties-data.sql  （SAP アクティビティ - アポイントメント外部データ）  
-* sap-email-collection-data.sql（SAP アクティビティ - Eメールデータ）
-* sap-email-collection-sql-email-recipients-data.sql（SAP アクティビティ - Eメール受信者データ）  
-* sap-email-collection-sql-email-sender-party-data.sql（SAP アクティビティ - Eメール送信先データ）  
+* sap-activity-sql-appointment-collection-data.sql（SAP アクティビティ - アポイントメントデータ）  
+* sap-activity-sql-appointment-collection-involved-parties-data.sql（SAP アクティビティ - アポイントメント関係者データ）  
+* sap-activity-sql-appointment-collection-other-parties-data.sql（SAP アクティビティ - アポイントメント他関係者データ）  
+* sap-activity-sql-email-collection-data.sql（SAP アクティビティ - Eメールデータ）
+* sap-activity-sql-email-collection-recipients-data.sql（SAP アクティビティ - Eメール受信者データ）  
+* sap-activity-sql-email-collection-sender-party-data.sql（SAP アクティビティ - Eメール送信先データ）  
+* sap-activity-sql-task-collection-data.sql （SAP アクティビティ - タスクデータ）
+* sap-activity-sql-tasks-involved-parties-data.sql（SAP アクティビティ - タスク関係者データ）
+* sap-activity-sql-visit-collection-data.sql（SAP アクティビティ - 訪問データ）
+* sap-activity-sql-visit-party-data.sql（SAP アクティビティ - 訪問関係者データ）
+* sap-activity-sql-visit-worklist-item-data.sql（SAP アクティビティ - 訪問ワークリスト明細データ）
 
 ## MySQLのセットアップ / Kubernetesの設定 / SQLテーブルの作成方法
 MySQLのセットアップ / Kubernetesの設定 / 具体的なSQLテーブルの作成方法、については、[mysql-kube](https://github.com/latonaio/mysql-kube)を参照ください。

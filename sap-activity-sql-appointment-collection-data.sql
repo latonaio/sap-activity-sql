@@ -1,9 +1,9 @@
-CREATE TABLE `sap_appointment_collection_data`
+CREATE TABLE `sap_activity_appointment_collection_data`
 (
+            `ID`                                     varchar(35) NOT NULL,
 			`ObjectID`                               varchar(70) DEFAULT NULL,
             `DocumentType`                           varchar(4) DEFAULT NULL,
             `DocumentTypeText`                       tinyint(1) DEFAULT NULL,
-            `ID`                                     varchar(35) NOT NULL,
             `Subject`                                varchar(765) DEFAULT NULL,
             `LifeCycleStatusCode`                    varchar(2) DEFAULT NULL,
             `LifeCycleStatusCodeText`                tinyint(1) DEFAULT NULL,

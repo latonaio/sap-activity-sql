@@ -1,9 +1,9 @@
-CREATE TABLE `sap_appointment_collection_appointment_involved_parties_data`
+CREATE TABLE `sap_activity_appointment_collection_involved_parties_data`
 (
-            `ObjectID`                               varchar(70) DEFAULT NULL,
-            `ParentObjectID`                         varchar(70) DEFAULT NULL,
             `ID`                                     varchar(35) NOT NULL,
-            `PartyID`                                varchar(60) DEFAULT NULL,
+            `ObjectID`                               varchar(70) NOT NULL,
+            `PartyID`                                varchar(60) NOT NULL,
+            `ParentObjectID`                         varchar(70) DEFAULT NULL,
             `RoleCode`                               varchar(10) DEFAULT NULL,
             `RoleCodeText`                           tinyint(1) DEFAULT NULL,
             `RoleCategoryCode`                       varchar(3) DEFAULT NULL,
@@ -20,7 +20,8 @@ CREATE TABLE `sap_appointment_collection_appointment_involved_parties_data`
             `Phone`                                  varchar(40) DEFAULT NULL,
             `ETag`                                   tinyint(1) DEFAULT NULL,
             `StartDate`                              tinyint(1) DEFAULT NULL,
-    PRIMARY KEY(`ID`)
-    CONSTRAINT `SAPCAppointmentCollectionAppointmentInvolvedPartiesData_fk` FOREIGN KEY (`ID`) REFERENCES `sap_appointment_collection_data` (`ID`)
+    PRIMARY KEY(`ID`, `ObjectID`, `PartyID`),
+    CONSTRAINT `SAPActivityAppointmentCollectionInvolvedPartiesData_fk` FOREIGN KEY (`ID`) REFERENCES `sap_activity_appointment_collection_data` (`ID`)
 ) ENGINE = InnoDB
  DEFAULT CHARSET = utf8mb4
+ 
